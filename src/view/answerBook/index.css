@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+html {
+  font-size: 16px;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #191919;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #191919;
+
+  font-family: liberation mono, Monaco, Menlo, Consolas, source code pro,
+    liberation mono, ubuntu mono, microsoft yahei, Courier,
+    helvetica neue, lantinghei sc, STXihei, WenQuanYi, sans-serif !important;
+}
+
+.container > section {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+section.book-cover {
+  background-color: #191919;
+  display: flex;
+}
+
+.border-image {
+  width: calc(100% - 3rem);
+  position: absolute;
+}
+.image-top {
+  top: 2rem;
+}
+.image-bottom {
+  transform: rotate(180deg);
+  bottom: 2rem;
+}
+
+/* ä¹¦æœ¬æ ‡é¢˜ */
+.title-chinese {
+  font-size: 45px;
+  font-weight: normal;
+  color: #bfad6f;
+  text-align: center;
+  margin-top: 1.6rem;
+}
+
+.title-english {
+  color: #fff;
+  font-size: 35px;
+  text-align: center;
+  color: #bfad6f;
+  margin-top: 1.6rem;
+
+  animation-delay: 0.5s;
+}
+
+#btn-enter {
+  width: calc(100% - 8rem);
+  height: 45px;
+  border: 3px solid #bfad6f;
+  color: #bfad6f;
+  font-size: 32px;
+  text-align: center;
+  line-height: 45px;
+  margin-top: 20%;
+  margin-bottom: 10rem;
+  cursor: pointer;
+
+  animation-delay: 1.5s;
+}
+
+#btn-enter:hover {
+  background-color: #bfad6f;
+  color: #fff;
+}
+
+/* ä»‹ç»é¡µé¢ */
+#book-intro,
+#book-result {
+  background-color: #f0eedf;
+  color: #353433;
+  /* display: flex; */
+  font-size: 16px;
+}
+
+.title-intro {
+  font-weight: normal;
+  font-size: 38px;
+  color: #000;
+  border: 2px solid #000;
+  border-left: none;
+  border-right: none;
+  padding: 0.3rem 0.6rem;
+}
+
+.intro-list {
+  line-height: 2.5rem;
+  padding: 2rem 3rem;
+  text-align: left;
+}
+.intro-list li {
+  margin-bottom: 0.5rem;
+}
+
+#btn-get,
+#btn-home {
+  background: #bfad6f;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 48px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  animation-delay: 2s;
+}
+
+#btn-get:hover,
+#btn-home:hover {
+  background: #7f703a;
+}
+
+/* ç»“æžœé¡µé¢ */
+
+#book-result {
+}
+
+#answer-str {
+  margin: 6rem 1rem 3rem;
+  font-size: 2rem;
+  color: #ff9800;
+  text-align: center;
+  line-height: 2.6rem;
+  min-height: 5rem;
+  font-family: Georgia, "Times New Roman", Times, Kai, "Kaiti SC", KaiTi,
+    BiauKai, FontAwesome, serif;
+  font-weight: bold;
+
+  animation-delay: 1s;
+}
+#answer-str span {
+  font-size: 1.3rem;
+}
+
+section.show {
+  display: flex;
+}
+
+.qrcode {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 2rem;
+
+  animation-delay: 1.5s;
+}
+
+.more-fun {
+  font-size: 1rem;
+  color: #795548;
+  position: absolute;
+  bottom: 2rem;
+  text-decoration: none;
+  border-bottom: 2px solid;
+
+  animation-delay: 2s;
+}
+
+/* åŠ¨ç”»æ•ˆæžœ */
+.title-chinese,
+.title-english,
+#btn-enter,
+.title-intro,
+.intro-list li,
+#btn-get,
+#btn-home,
+#answer-str,
+.qrcode,
+.more-fun {
+  animation-name: fade-in;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+section.show .intro-list li:nth-child(1) {
+  animation-delay: 1s;
+}
+section.show .intro-list li:nth-child(2) {
+  animation-delay: 2s;
+}
+section.show .intro-list li:nth-child(3) {
+  animation-delay: 3s;
+}
+section.show .intro-list li:nth-child(4) {
+  animation-delay: 4s;
+}
+section.show .intro-list li:nth-child(5) {
+  animation-delay: 5s;
+}
+#btn-get {
+  animation-delay: 6s;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

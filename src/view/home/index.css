@@ -1,0 +1,751 @@
+@font-face {
+    font-family: "toolwa";
+    src: url("../fonts/toolwa/toolwa.woff2") format("woff2"),
+      url("../fonts/toolwa/toolwa.woff") format("woff");
+    font-display: swap;
+  }
+  
+  html,
+  body,
+  div,
+  p,
+  a,
+  img,
+  span,
+  code,
+  pre,
+  kbd,
+  blockquote,
+  iframe,
+  header,
+  footer,
+  section,
+  article,
+  figure,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  ul,
+  ol,
+  li,
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr,
+  input,
+  button,
+  textarea {
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    background-color: #f4f6f9;
+    font-size: 14px;
+  }
+  
+  option:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .am-container {
+    max-width: 1200px;
+  }
+  
+  .site-main {
+    min-height: 500px;
+  }
+  .site-main-wide {
+    max-width: 1500px;
+  }
+  
+  /* 排版辅助 ******************************/
+  .code-font {
+    font-family: liberation mono, Monaco, Menlo, Consolas, source code pro,
+      liberation mono, ubuntu mono, microsoft yahei, 微软雅黑, Courier,
+      helvetica neue, lantinghei sc, STXihei, WenQuanYi, sans-serif !important;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  .flex {
+    display: flex;
+  }
+  /* 中间填充 */
+  .flex-1 {
+    flex: 1 1 0%;
+  }
+  
+  /* 按钮组 */
+  .btn-groups {
+    font-size: 0; /* 去除默认间隙 */
+    margin-bottom: -8px;
+  }
+  .btn-groups .am-btn {
+    margin: 0 8px 8px 0;
+  }
+  
+  /* 自动宽高框 */
+  .mk-auto-box {
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 70%;
+  }
+  .mk-auto-box > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .mk-auto-box > div > * {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* 代码高亮 *********************************/
+  .CodeMirror {
+    font-family: "Liberation Mono", Monaco, Menlo, Consolas, "Source Code Pro",
+      "Liberation Mono", "Ubuntu Mono", "Microsoft Yahei", "微软雅黑", Courier,
+      "Helvetica Neue", "Lantinghei SC", STXihei, WenQuanYi, sans-serif !important;
+  }
+  
+  /* 占位文本 */
+  .CodeMirror pre.CodeMirror-placeholder {
+    color: #999 !important;
+  }
+  
+  /* markdown 排版 *********************************/
+  .markdown-body {
+    font-size: 14px;
+  }
+  
+  /*** 滑块控件 ******************************************/
+  .noUi-base .noUi-connect {
+    background: #8bc34a;
+  }
+  
+  /* 自动隐藏数值 */
+  .noUi-tooltip-hide .noUi-tooltip {
+    display: none;
+  }
+  .noUi-tooltip-hide .noUi-active .noUi-tooltip {
+    display: block;
+  }
+  
+  /* 透明背景效果 */
+  .trans-box {
+    background-color: #fff;
+    background-image: linear-gradient(
+        45deg,
+        #eee 25%,
+        transparent 25%,
+        transparent 75%,
+        #eee 75%,
+        #eee
+      ),
+      linear-gradient(
+        45deg,
+        #eee 25%,
+        transparent 25%,
+        transparent 75%,
+        #eee 75%,
+        #eee
+      );
+    background-size: 16px 16px;
+    background-position: 0 0, 8px 8px;
+  }
+  
+  /* amazeui 美化代码 */
+  
+  /* 标题 */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+  }
+  
+  blockquote {
+    font-family: inherit;
+    color: #999;
+  }
+  
+  /* 输入框边框颜色 */
+  .am-form input[type="number"],
+  .am-form input[type="search"],
+  .am-form input[type="text"],
+  .am-form input[type="password"],
+  .am-form input[type="datetime"],
+  .am-form input[type="datetime-local"],
+  .am-form input[type="date"],
+  .am-form input[type="month"],
+  .am-form input[type="time"],
+  .am-form input[type="week"],
+  .am-form input[type="email"],
+  .am-form input[type="url"],
+  .am-form input[type="tel"],
+  .am-form input[type="color"],
+  .am-form select,
+  .am-form textarea,
+  .am-form-field {
+    border-color: #dcdfe6;
+  }
+  .am-form input[type="number"]:focus,
+  .am-form input[type="search"]:focus,
+  .am-form input[type="text"]:focus,
+  .am-form input[type="password"]:focus,
+  .am-form input[type="datetime"]:focus,
+  .am-form input[type="datetime-local"]:focus,
+  .am-form input[type="date"]:focus,
+  .am-form input[type="month"]:focus,
+  .am-form input[type="time"]:focus,
+  .am-form input[type="week"]:focus,
+  .am-form input[type="email"]:focus,
+  .am-form input[type="url"]:focus,
+  .am-form input[type="tel"]:focus,
+  .am-form input[type="color"]:focus,
+  .am-form select:focus,
+  .am-form textarea:focus,
+  .am-form-field:focus {
+    border-color: #409eff;
+    box-shadow: 0 0 0 1px #409eff inset;
+  }
+  
+  /* 按钮 */
+  .am-btn {
+    font-size: 14px;
+  }
+  .am-btn-sm {
+    font-size: 12px;
+  }
+  .am-btn-xs {
+    font-size: 10px;
+  }
+  .am-btn-xl {
+    font-size: 18px;
+  }
+  .am-btn-lg {
+    font-size: 16px;
+  }
+  .am-btn:focus {
+    outline: none !important;
+  }
+  .am-btn-primary,
+  .am-input-group-btn > .am-btn-primary {
+    background-color: #409eff;
+    border-color: #409eff;
+  }
+  .am-btn-primary:hover,
+  .am-btn-primary:focus {
+    background-color: #79bbff;
+    border-color: #79bbff;
+  }
+  
+  /* 警告框 */
+  .am-alert {
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+  }
+  .am-alert .am-close {
+    /*color: #fff;*/
+    opacity: 0.8;
+  }
+  .am-alert hr {
+    margin: 6px 0;
+  }
+  .am-alert a {
+    color: #2196f3;
+    opacity: 0.8;
+    position: relative;
+  }
+  .am-alert a:hover {
+    opacity: 1;
+  }
+  
+  .am-alert,
+  .am-alert-secondary {
+    background-color: #f4f4f5;
+    color: #909399;
+  }
+  
+  .am-alert-success {
+    background-color: #f0f9eb;
+    color: #67c23a;
+  }
+  .am-alert-warning {
+    background-color: #fdf6ec;
+    color: #e6a23c;
+  }
+  .am-alert-danger {
+    background-color: #fef0f0;
+    color: #f56c6c;
+  }
+  /*.am-alert a:hover:after {*/
+  /*    content: "";*/
+  /*    position: absolute;*/
+  /*    width: 100%;*/
+  /*    left: 0;*/
+  /*    bottom: -2px;*/
+  /*    border-bottom: 2px solid #fff;*/
+  /*}*/
+  
+  /* 标题栏 */
+  .am-titlebar-default .am-titlebar-title {
+    font-weight: normal;
+    font-size: 2rem;
+    color: #252629;
+  }
+  .am-titlebar-default .am-titlebar-title:before {
+    border-left: 3px solid #1e9fff;
+  }
+  
+  /* 面板 */
+  .am-panel {
+    box-shadow: 0 10px 60px 0 rgba(29, 29, 31, 0.09);
+    border: none;
+    margin-bottom: 30px;
+  }
+  .am-panel-hd {
+    height: 42px;
+    line-height: 42px;
+    padding: 0 15px;
+  }
+  .am-panel-default > .am-panel-hd {
+    background-color: #fff;
+    border-color: #f6f6f6;
+  }
+  
+  /* 标签页错位 BUG */
+  .am-tabs-bd {
+    position: inherit !important;
+  }
+  
+  /* 列表 */
+  .am-list > li {
+    border: 1px solid #f6f6f6;
+  }
+  
+  /*** [导航栏] ********************************************************/
+  
+  /* 顶部导航栏背景色 */
+  .am-topbar {
+    background: #fff;
+    border-bottom: 1px solid #efefef;
+  }
+  
+ 
+  
+  /*弹动效果*/
+  .hover-bounce:hover {
+    -webkit-animation: bounce 1s 0.1s ease both;
+    -moz-animation: bounce 1s 0.1s ease both;
+  }
+  @-webkit-keyframes bounce {
+    0% {
+      -webkit-transform: scale(1);
+    }
+    10%,
+    20% {
+      -webkit-transform: scale(0.8) rotate(-2deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: scale(1.1) rotate(2deg);
+    }
+    40%,
+    60%,
+    80% {
+      -webkit-transform: scale(1.1) rotate(-2deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotate(0);
+    }
+  }
+  
+  /*** [工具列表] ********************************************************/
+  
+  /* 工具列表 */
+  .tool-list {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  
+  .tool-list li {
+    padding: 1rem;
+  }
+  
+  /* 工具卡片 */
+  .tool-item,
+  .tool-item img {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  .tool-item {
+    background: #fff;
+    display: -webkit-box;
+    display: flex;
+    box-shadow: 0 1px 5px rgb(180 195 255 / 30%);
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 15px 18px;
+    margin: 0;
+    border-radius: 2px;
+    border: 1px solid transparent;
+  }
+  .tool-item img {
+    width: 30px;
+    height: 30px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+  .tool-item div {
+    width: 100%;
+    /*padding-right: 40px;*/
+    overflow: hidden;
+  }
+  .tool-item h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #303659;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .tool-item p {
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 12px;
+    color: #888ea2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .tool-item:hover {
+    box-shadow: 0 2px 10px rgb(180 195 255 / 50%);
+    border: 1px solid #3464e0;
+  }
+  .tool-item:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  /* 工具卡片小标题 */
+  .tool-sub-title {
+    color: #515c6b;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 1em 0 0;
+  }
+  
+  @media (max-width: 550px) {
+    .tool-list {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+    }
+    .tool-list li {
+      padding: 0.8rem;
+    }
+    .tool-item {
+      padding: 10px 12px;
+    }
+  }
+  
+ 
+  /*** [网站首页] ********************************************************/
+  
+  /*** [工具页面] ********************************************************/
+  
+  /* 工具页面 banner */
+  .tool-banner {
+    color: #fff;
+  
+    background: #00bfb0;
+    background: -webkit-gradient(
+      linear,
+      right bottom,
+      left top,
+      from(#4caf50),
+      to(#00bfb0)
+    );
+    background: linear-gradient(160deg, #4caf50, #00bfb0);
+  
+    position: relative;
+    overflow-y: hidden;
+  
+    padding-top: 30px;
+    padding-bottom: 30px;
+  
+    margin-bottom: 30px;
+  }
+  
+  .tool-banner h1 {
+    font-weight: 400;
+    font-size: 28px;
+  }
+  .tool-banner p {
+    /*color: #555;*/
+  }
+  .tool-banner:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    padding-bottom: 20px;
+    opacity: 0.6;
+    background: url(../img/line.png) center center no-repeat;
+    background-position-y: -190px;
+    /* background-position: -900px -300px; */
+  }
+  
+  /* 工具表单 */
+  #tool-form,
+  .tool-form {
+    margin: 35px 0 40px;
+  }
+  .tool-form-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  /* 侧栏的工具列表 */
+  .side-tools img {
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+  }
+  .side-tools a {
+    color: #000;
+  }
+  .side-tools a:hover {
+    color: #038bd0;
+  }
+  
+  /* 图片上传 */
+  .mk-pic-upload {
+    position: relative;
+    background-position: 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0 auto 20px;
+  }
+  
+  .mk-pic-upload .mk-pic-upload-input {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .mk-pic-upload .mk-pic-upload-btn,
+  .mk-pic-upload .mk-pic-upload-input {
+    width: 100%;
+    background: #eee;
+    background: rgba(238, 238, 238, 0.6);
+    display: block;
+    height: 80px;
+    color: #4a4a4a;
+    border: 3px dashed #a2a1a1;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    border-radius: 3px;
+    text-shadow: 0 0 7px #fff;
+  }
+  .mk-pic-upload:hover .mk-pic-upload-btn,
+  .mk-pic-upload:hover .mk-pic-upload-input {
+    background: #eee;
+    background: rgba(238, 238, 238, 0.95);
+    border-color: #616161;
+  }
+  .mk-pic-upload.ondrag .mk-pic-upload-btn,
+  .mk-pic-upload.ondrag .mk-pic-upload-input {
+    border-color: #2196f3;
+  }
+  
+  /* 标签页 */
+  .toolwa-tabs {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  .toolwa-tab-head {
+    list-style: none;
+    user-select: none;
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    margin: 0;
+  
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  
+  .toolwa-tab-head:hover {
+    overflow-x: auto;
+  }
+  
+  .toolwa-tab-head > li,
+  .toolwa-tab-head > a {
+    color: inherit;
+    display: inline-block;
+    padding: 8px 18px;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    min-width: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .toolwa-tab-head > li:hover,
+  .toolwa-tab-head > a:hover {
+    color: #444;
+  }
+  
+  .toolwa-tab-head > li.active,
+  .toolwa-tab-head > a.active {
+    border-bottom-color: #007bff;
+    color: #007bff;
+  }
+  
+  .toolwa-tab-body > div {
+    display: none;
+    padding: 10px;
+  }
+  
+  .toolwa-tab-body > div.active {
+    display: block;
+  }
+  
+  /* 被用作标签页的头 */
+  .toolwa-tabs.panel-head {
+    border-radius: 0;
+    border: none;
+  }
+  .toolwa-tabs.panel-head > .toolwa-tab-head > li,
+  .toolwa-tabs.panel-head > .toolwa-tab-head > a {
+    padding: 8px 18px 6px;
+  }
+  
+  /* 基于 flex 的简易表单 */
+  .mk-form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.2rem;
+  }
+  .mk-form-group > label {
+    display: flex;
+    white-space: nowrap;
+    font-weight: normal;
+    text-align: right;
+  }
+  .mk-form-group > input {
+    flex: 1;
+  }
+  
+  .mk-input[type="color"] {
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  /* 原生滑块 */
+  .mk-input[type="range"] {
+    -webkit-appearance: none; /* Safari 和 Chrome */
+    width: 100%; /* 滑块宽度 */
+    height: 8px; /* 滑块高度 */
+    background: #ddd; /* 背景颜色 */
+    border-radius: 5px; /* 圆角 */
+    outline: none; /* 去掉焦点轮廓 */
+  }
+  
+  /* 滑块的轨道 */
+  .mk-input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px; /* 轨道高度 */
+    background: #ddd; /* 轨道背景颜色 */
+    border-radius: 5px; /* 轨道圆角 */
+  }
+  
+  .mk-input[type="range"]::-moz-range-track {
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+  }
+  
+  /* 滑块的滑块部分 */
+  .mk-input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Safari 和 Chrome */
+    width: 20px; /* 滑块宽度 */
+    height: 20px; /* 滑块高度 */
+    border-radius: 50%; /* 圆形 */
+    background: #4caf50; /* 滑块颜色 */
+    cursor: pointer; /* 鼠标指针样式 */
+    margin-top: -6px; /* 调整滑块位置 */
+  }
+  
+  .mk-input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+  }
+  
+  /* 滑块的hover和active效果 */
+  .mk-input[type="range"]:hover::-webkit-slider-thumb {
+    background: #45a049; /* 鼠标悬停时颜色 */
+  }
+  
+  .mk-input[type="range"]:active::-webkit-slider-thumb {
+    background: #388e3c; /* 鼠标点击时颜色 */
+  }
+  
+  .mk-input[type="range"]:hover::-moz-range-thumb {
+    background: #45a049;
+  }
+  
+  .mk-input[type="range"]:active::-moz-range-thumb {
+    background: #388e3c;
+  }
+  
+  /* 全屏显示 */
+  .toolwa-full {
+    background: #fff;
+    z-index: 999999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+  }
