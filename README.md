@@ -1,5 +1,36 @@
-# Vue 3 + TypeScript + Vite
+# leisureToolset
+「摸鱼哇」—— 专为打工人打造的快乐摸鱼时光 偷偷放松一下，效率更高！这里集合了各种简单有趣的小工具，帮你短暂逃离工作压力，快速回血。 ✅ 无广告 · ✅ 免登录 · ✅ 即开即玩
+详细描述
+🌍 网站功能
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+休闲小游戏
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+经典小游戏合集（如2048、贪吃蛇、扫雷），支持随时暂停隐藏，老板来了秒切屏！
+
+假装工作页面
+
+一键切换「高仿真」代码编辑器/Excel/PPT 界面，摸鱼不留痕。
+
+减压神器
+
+泡泡纸模拟器、键盘音效模拟、无脑点击解压动画，专治周一综合征。
+
+时间管理
+
+番茄钟+反向计时器：科学摸鱼，劳逸结合（表面勤奋，实则休息）。
+
+🎯 适合人群
+
+上班族、学生党、需要短暂放空的互联网难民。
+
+✨ 特色
+
+极简设计：3秒加载，不卡顿不闪退。
+
+隐私保护：无数据收集，用完即走。
+
+开源免费：GitHub仓库 欢迎贡献创意！
+
+🚀 访问方式
+
+（建议收藏，Ctrl+D 快速隐藏页面）
