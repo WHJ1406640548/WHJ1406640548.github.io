@@ -8,7 +8,7 @@
           <h1 class="index-banner-title">摸鱼哇 - 在线工具集</h1>
           <p>无需下载 打开即可使用的工具</p>
           <p>
-            <a href="#index-main" class="am-btn am-btn-sm index-banner-btn"
+            <a href="#" class="am-btn am-btn-sm index-banner-btn"
               >开始探索</a
             >
           </p>
@@ -21,7 +21,7 @@
         <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 am-thumbnails tool-list">
           <li v-for="item in category.items" :key="item.title">
             <a
-              :href="item.iframe ? '/#/iframe' : item.url"
+              :href="item.iframe === false ? item.url : '/#/iframe'"
               target="_blank"
               class="tool-item"
               :title="item.description"
@@ -34,12 +34,11 @@
                 loading="lazy"
               />
               <div>
-
-
                 <h3>{{ item.title }}</h3>
                 <p>{{ item.description }}</p>
               </div>
             </a>
+
           </li>
         </ul>
       </template>
@@ -53,9 +52,13 @@ import { useBubble } from "../../hook/useBubble";
 import { toolCategories } from "./mockData";
 
 const { initBubble } = useBubble("bubble-canvas");
-const setIframeUrl = (url) =>{
+const setIframeUrl = (url) => {
+  if (!url) {
+    localStorage.setItem("iframeUrl", url);
+    return alert('无权限访问，请联系管理员')
+  }
   localStorage.setItem("iframeUrl", url);
-}
+};
 onMounted(() => {
   initBubble();
 });

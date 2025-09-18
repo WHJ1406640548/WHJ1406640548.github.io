@@ -1,7 +1,7 @@
 // types.ts
 export interface Tool {
   title: string;
-  url: string;
+  url?: string;
   icon: string;
   description: string;
   disabled?: boolean;
@@ -22,15 +22,17 @@ const moyuItems: Tool[] = [
     iframe: true,
     description: "让白噪音放松你的心情",
   },
-  {
-    title: "煎 · 蛋",
-    url: "https://jandan.net/treehole",
-    icon: "https://jandan.net/wp-content/themes/jandan2025/images/logo2025.png",
-    description: "每个人都需要一个树洞，存放那些无法言说的秘密和情绪",
-  },
+  // {
+  //   title: "煎 · 蛋",
+  //   url: "https://jandan.net/treehole",
+  //   iframe: true,
+  //   icon: "https://jandan.net/wp-content/themes/jandan2025/images/logo2025.png",
+  //   description: "每个人都需要一个树洞，存放那些无法言说的秘密和情绪",
+  // },
   {
     title: "头 · 像",
     url: "https://vue-color-avatar.leoku.dev/",
+    iframe: true,
     icon: "/favicon/avatar.png",
     description: "给自己捏个脸",
   },
@@ -38,6 +40,7 @@ const moyuItems: Tool[] = [
     title: "古诗文起名",
     url: "https://xiaosang.net/gushi_namer/",
     icon: "/favicon/takeName.png",
+    iframe: true,
     description: "古诗文起名: 利用诗经 楚辞 唐诗 宋词等给小朋友起名字",
   },
   {
@@ -52,6 +55,7 @@ const moyuItems: Tool[] = [
     title: "全历史",
     url: "https://www.allhistory.com/",
     icon: "/favicon/allhistory.ico",
+    iframe: true,
     description:
       "全历史(Allhistory）以AI知识图谱为核心引擎，通过高度时空化、关联化数据的方式构造及展现数字人文内容，尤其是历史知识。让用户沉浸在纵横开阔、左图右史的（历史、人文、社科等）知识海洋中。",
   },
@@ -59,6 +63,7 @@ const moyuItems: Tool[] = [
     title: "合同示范文本库",
     url: "https://htsfwb.samr.gov.cn/",
     icon: "/favicon/samr.png",
+    iframe: false,
     description: "国家市场监督管理总局，合同示范文本库",
   },
   {
@@ -75,7 +80,8 @@ const moyuItems: Tool[] = [
   },
   {
     title: "装逼生成器",
-    url: "https://c.tianhezulin.com/",
+    // url: "https://c.tianhezulin.com/",
+    iframe: false,
     icon: "/favicon/logo2.jpg",
     description: "装逼生成器,装逼制图神器",
   },
@@ -90,6 +96,7 @@ const moyuItems: Tool[] = [
     title: "全景故宫",
     url: "https://pano.dpm.org.cn/",
     icon: "/favicon/qiniandian.png",
+    iframe: false,
     description: "足不出户，在线游览故宫",
   },
   {
@@ -144,6 +151,7 @@ const moyuItems: Tool[] = [
   {
     title: "声音倒放",
     url: "/#/soundPlayback",
+    iframe: false,
     icon: "/favicon/rs.png",
     description: "在线录音或上传一段音频，将音频内容倒放",
   },
@@ -157,12 +165,14 @@ const moyuItems: Tool[] = [
   {
     title: "支付宝到账音效生成器",
     url: "./#/receipt",
+    iframe: false,
     icon: "/favicon/receipt.png",
     description: "生成任意金额的支付宝到账音效，可以下载用于通知或者闹钟铃声",
   },
   {
     title: "电子木鱼",
     url: "/#/woodenFish/",
+    iframe: false,
     icon: "/favicon/wooden-fish.png",
     description: "随时随地刷功德",
   },
@@ -176,19 +186,22 @@ const moyuItems: Tool[] = [
   {
     title: "锅碗瓢盆打击乐",
     url: "/#/bucketDrums/",
+    iframe: false,
     icon: "/favicon/bucket-drums.png",
     description: "由水桶、锅、锅盖、茶杯等构成的组合乐器",
   },
   {
     title: "烟花模拟器",
     url: "/#/firework/",
+    iframe: false,
     icon: "/favicon/firework.png",
     description: "愿你所有的烦恼都能随着烟花一同消散",
   },
   {
     title: "个人数据泄漏检测",
-    url: "/#/aiuys/",
+    // url: "/#/aiuys/",
     icon: "/favicon/aiuys.ico",
+    iframe: false,
     description:
       "QQ / 手机号 / 身份证号 / 邮箱 / 微博UID，检测隐私状态，保护个人隐私",
     disabled: true,
@@ -238,6 +251,7 @@ const moyuItems: Tool[] = [
   {
     title: "答案之书",
     url: "./#/answerBook",
+    iframe: false,
     icon: "/favicon/book-of-answers.png",
     description: "来这里寻找答案",
   },
@@ -248,16 +262,17 @@ const moyuItems: Tool[] = [
     icon: "/favicon/mx.png",
     description: "通过 60 秒的冥想帮助你走出困境",
   },
-  {
-    title: "摸鱼办日历提醒",
-    url: "https://toolwa.com/myb/",
-    iframe: true,
-    icon: "/favicon/myb.png",
-    description: "摸鱼必备神器",
-  },
+  // {
+  //   title: "摸鱼办日历提醒",
+  //   url: "https://toolwa.com/myb/",
+  //   iframe: true,
+  //   icon: "/favicon/myb.png",
+  //   description: "摸鱼必备神器",
+  // },
   {
     title: "迷宫生成器",
     url: "/#/maze/",
+    iframe: false,
     icon: "/favicon/maze.png",
     description: "一个在线的随机迷宫生成工具，它可以快速生成各种不同的迷宫图形",
   },
@@ -285,6 +300,7 @@ const moyuItems: Tool[] = [
   {
     title: "毒鸡汤",
     url: "/#/soup/",
+    iframe: false,
     icon: "/favicon/soup.png",
     description: '句句"治愈"人心，只为了帮你更好的看清人生认识自己',
   },
@@ -531,21 +547,21 @@ export const toolCategories: ToolCategory[] = [
     name: "摸鱼工具",
     items: moyuItems,
   },
-  {
-    id: "moyuItems",
-    name: "便民工具",
-    items: [],
-  },
+  // {
+  //   id: "moyuItems",
+  //   name: "便民工具",
+  //   items: [],
+  // },
   {
     id: "moyuItems",
     name: "娱乐工具",
-    items: utilityItems,
+    items: [],
   },
-  {
-    id: "moyuItems",
-    name: "实用工具",
-    items: utilityItems,
-  },
+  // {
+  //   id: "moyuItems",
+  //   name: "实用工具",
+  //   items: [],
+  // },
   {
     id: "gameItems",
     name: "游戏工具",
