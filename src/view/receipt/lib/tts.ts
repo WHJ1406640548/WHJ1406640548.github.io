@@ -2,8 +2,9 @@ import { Token } from './parser';
 export class TTSProvider {
 }
 export class LocalAliPayTTS extends TTSProvider {
+base: string;
     constructor() {
-        super(...arguments);
+        super();
         this.base = '/alipay/';
     }
     begin() {

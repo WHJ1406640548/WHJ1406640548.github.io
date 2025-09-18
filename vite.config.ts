@@ -27,6 +27,7 @@ export default defineConfig({
   build: {
     target: 'es2015', // 强制兼容模式
     cssTarget: 'chrome61', // 避免 CSS 变量问题
+    outDir: 'dist', // 输出目录
     rollupOptions: {
       output: {
         manualChunks: undefined, // 禁用代码分割

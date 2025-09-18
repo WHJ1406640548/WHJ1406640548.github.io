@@ -217,7 +217,7 @@ const cup2Audio = ref(null);
 const lid1Audio = ref(null);
 
 // 动画时间线
-const animations = {
+const animations:any = {
   can1: null,
   can2: null,
   can3: null,
