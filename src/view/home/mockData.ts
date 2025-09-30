@@ -539,7 +539,77 @@ const gameItems: Tool[] = [
     description: "在哪里能玩到更多小游戏呢",
   },
 ];
-
+const yuleTools: Tool[] = [
+  {
+    title: "中文找台词",
+    url: "https://zhaotaici.cn",
+    iframe: true,
+    icon: "/favicon/yule/zhaotaici.ico",
+    description: "台词搜索，找出你心中最美的句子",
+  },
+  {
+    title: "英文找台词",
+    url: "https://clip.cafe/",
+    icon: "/favicon/yule/cafe.png",
+    description: "台词搜索，找出你心中最美的句子",
+  },
+  {
+    title: "冬日小说网",
+    url: "https://www.drxsw.com/",
+    iframe: true,
+    icon: "/favicon/yule/drxsw.ico",
+    description: "小说免费阅读 - 最好看的小说阅读网",
+  },
+  {
+    title: "哔哩轻小说",
+    url: "https://www.linovelib.com/",
+    iframe: true,
+    icon: "/favicon/yule/linovelib.ico",
+    description: "日本动漫轻小说在线阅读",
+  },
+  {
+    title: "红狐狸",
+    url: "https://honghuli.com/",
+    iframe: true,
+    icon: "/favicon/yule/honghuli.ico",
+    description: "今年最新大片，新片，红狐狸影院",
+  },
+  {
+    title: "HDmoli",
+    url: "https://www.hdmoli.pro/",
+    iframe: true,
+    icon: "/favicon/yule/hdmoli.ico",
+    description: "HDMOLI 提供免费、高品质、同时支持电脑和移动设备的影视剧在线观看网站",
+  },
+  {
+    title: "耐看点播",
+    url: "https://nkvod.com/",
+    iframe: true,
+    icon: "/favicon/yule/nkvod.png",
+    description: "耐看点播-追最新电视剧-看热门电影",
+  },
+  {
+    title: "厂长资源",
+    url: "https://www.cz233.com/",
+    iframe: true,
+    icon: "/favicon/yule/hbcn.ico",
+    description: "海量1080p经典影视免费观看！",
+  },
+  {
+    title: "趣动漫",
+    url: "https://www.qdm66.com/",
+    iframe: true,
+    icon: "/favicon/yule/qdm66.ico",
+    description: "趣动漫_专注动漫的网站_在线观看全集动漫",
+  },
+  {
+    title: "西瓜卡通",
+    url: "https://cn.xgcartoon.com/",
+    iframe: true,
+    icon: "/favicon/yule/xgcartoon.ico",
+    description: "海量热门高清动漫，卡通，动画线上免费看。",
+  },
+]
 // data.ts
 export const toolCategories: ToolCategory[] = [
   {
@@ -555,7 +625,7 @@ export const toolCategories: ToolCategory[] = [
   {
     id: "moyuItems",
     name: "娱乐工具",
-    items: [],
+    items: yuleTools,
   },
   // {
   //   id: "moyuItems",
