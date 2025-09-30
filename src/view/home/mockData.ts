@@ -550,6 +550,7 @@ const yuleTools: Tool[] = [
   {
     title: "英文找台词",
     url: "https://clip.cafe/",
+    iframe: false,
     icon: "/favicon/yule/cafe.png",
     description: "台词搜索，找出你心中最美的句子",
   },
